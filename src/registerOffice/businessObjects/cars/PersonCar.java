@@ -20,7 +20,8 @@ public class PersonCar extends Car{
 	
 	public PersonCar()
 	{
-		this("","");
+		
+		this("",""); // odwoluje sie do metody wyzej
 	}
 	
 	//wlasciwosci

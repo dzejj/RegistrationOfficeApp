@@ -10,26 +10,38 @@ public class PersonManager implements ManagerInterface<Person>{
 	
 	@Override
 	public Person get() {
-		// TODO Auto-generated method stub
-		return null;
+
+	    int index  = (int)(Math.random()*(persons.size() + 1));
+		return persons.get(index);
 	}
 
 	@Override
 	public List<Person> getAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public boolean save(Person person) {
 		
-		return persons.add(new Person(person.getName()));
+	
+		return persons;
+	}
+
+ 
+	public boolean contain(Person person){
+		
+		if(persons.contains(person))
+	return true;
+		else
+		return false;
+	}
+	
+	@Override
+	public void save(Person person) {
+		
+		persons.add(person);
+		
 	}
 
 	@Override
-	public boolean delete() {
-		// TODO Auto-generated method stub
-		return false;
+	public void delete(Person person) {
+		persons.remove(person);
+		
 	}
 
 }
